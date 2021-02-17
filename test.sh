@@ -1,10 +1,13 @@
 #!/bin/sh
 set -e
 ROOT=$PWD
-echo "Creating venv"
-python -m venv venv
-echo "Activating venv"
-source venv/bin/activate
+
+if [ "$CI" != "true" ]; then
+    echo "Creating venv"
+    python -m venv venv
+    echo "Activating venv"
+    source venv/bin/activate
+fi
 echo "Installing deps for consumer"
 cd $ROOT/consumer && pip install -r requirements.txt > /dev/null
 echo "Installing deps for producer"
