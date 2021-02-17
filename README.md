@@ -1,4 +1,6 @@
 # website-monitor
+[![Build Status](https://travis-ci.com/markusn/website-monitor.svg?branch=master)](https://travis-ci.com/markusn/website-monitor)
+
 A simple website monitor based on Kafka and Postgres. The application is
 split into a producer which checks the websites and a consumer which persists
 the website stats.
