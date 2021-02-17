@@ -1,0 +1,19 @@
+{
+    "sites": [
+        {
+            "url": "https://www.google.se",
+            "regex": null
+        },
+        {
+            "url": "https://www.dn.se",
+            "regex": null
+        },
+        {
+            "url": "https://www.bangkokpost.com",
+            "regex": null
+        }
+    ],
+    "kafka_host": "localhost:9092",
+    "kafka_topic": "site-status",
+    "log_level": "INFO"
+}

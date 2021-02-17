@@ -1,0 +1,6 @@
+{
+    "postgres_uri": "postgres://testuser:testpass@127.0.0.1/test",
+    "kafka_host": "localhost:9092",
+    "kafka_topic": "site-status",
+    "log_level": "INFO"
+}

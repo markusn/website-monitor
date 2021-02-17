@@ -1,0 +1,26 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testpass
+      POSTGRES_DB: test
+    ports:
+      - 5432:5432
+  zookeeper:
+    image: wurstmeister/zookeeper
+    restart: always
+    ports:
+      - "2181:2181"
+  kafka:
+    image: wurstmeister/kafka
+    restart: always
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_HOST_NAME: localhost

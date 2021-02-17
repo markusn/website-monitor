@@ -1,0 +1,5 @@
+aiokafka==0.7.0
+httpx==0.13.3
+async-cron==1.6.2
+pytest-asyncio==0.14.0
+flake8==3.8.4
